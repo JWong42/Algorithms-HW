@@ -12,11 +12,7 @@ public class Percolation {
 		gridSize = N;              
 		virtualTop = N*N;          // For 4x4 matrix, the virtualTop will be at index 16
 		virtualBottom = (N*N)+1;   // For 4x4 matrix, the virtualBottom will be at index 17
-		openSites = new int[N*N];  // Matrix used to keep track of open sites using 0's (closed) and 1's (opened)
-		
-		for (int i = 0; i < (N*N); i++) {
-			openSites[i] = 0;  // all sites are blocked initially
-		}
+		openSites = new int[N*N];  // Matrix used to keep track of opened/closed sites using 1's (opened) and 0's (closed) 
 		
 		ufOne = new WeightedQuickUnionUF((N*N)+1);  // Obj used in checking for isFull - no virtual bottom
 		ufTwo = new WeightedQuickUnionUF((N*N)+2);	// Obj used in checking for percolation
