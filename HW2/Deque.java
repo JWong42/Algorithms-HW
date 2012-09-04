@@ -20,7 +20,7 @@ public class Deque<Item> implements Iterable<Item> {
 	    post.prev = pre; 
 	}
 	
-	// 
+	// Checks if deque is empty. 
 	public boolean isEmpty() {
 		return N == 0; 
 	}
