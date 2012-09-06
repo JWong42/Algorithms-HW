@@ -4,7 +4,6 @@ public class Deque<Item> implements Iterable<Item> {
     private int N;       // Size of deque. 
     private Node pre, post;  // References to sentinels of deque.
     
-
     // Deque utilizes doubly linked-list.
     private class Node { 
     	private Item item; 

@@ -1,7 +1,7 @@
 import java.util.Iterator; 
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
-	public Item[] a;  // Array of items. 
+	private Item[] a;  // Array of items. 
 	private int N;    // Size of randomized queue. 
 	
     // Initializes an empty queue.
@@ -62,7 +62,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	}
 	
 	// Implementation of iterator object. 
-	public class RQIterator implements Iterator<Item> {
+	private class RQIterator implements Iterator<Item> {
 		private int i = N; 
 		private Item[] copy; 
 		
