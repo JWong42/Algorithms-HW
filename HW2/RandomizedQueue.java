@@ -80,6 +80,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		}
 		
 		public Item next() { 
+			if (!hasNext()) throw new java.util.NoSuchElementException("End of randomized queue reached.");
 			return copy[--i]; 
 		}
 		

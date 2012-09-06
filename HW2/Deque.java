@@ -91,6 +91,7 @@ public class Deque<Item> implements Iterable<Item> {
 	    }
 	
 	    public Item next() { 
+			if (!hasNext()) throw new java.util.NoSuchElementException("End of deque reached.");
 		    Item item = current.item; 
 		    current = current.next; 
 		    return item; 
